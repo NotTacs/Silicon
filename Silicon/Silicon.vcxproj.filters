@@ -1,0 +1,133 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="Resource Files">
+      <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
+      <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
+    </Filter>
+    <Filter Include="Server">
+      <UniqueIdentifier>{8811b038-a061-45ce-9e46-229be5502c63}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Misc">
+      <UniqueIdentifier>{102a1451-9cbf-49b7-be91-e91baaf9c4aa}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Gameplay">
+      <UniqueIdentifier>{284d66b3-511c-4c86-915c-87473b192e40}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Misc\Header">
+      <UniqueIdentifier>{d6cf2f80-7648-49ea-8998-b521e4b1c64f}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Misc\Source">
+      <UniqueIdentifier>{6f5c0de6-fc45-499a-b296-4e1785111418}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Gameplay\Header">
+      <UniqueIdentifier>{c8e460d5-d9bf-4970-b791-8c8684611be2}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Gameplay\Source">
+      <UniqueIdentifier>{398cc103-8037-4131-9f72-35ccdbcc1987}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Server\Header">
+      <UniqueIdentifier>{9b79b70d-7b6d-41fa-a3b5-38eda3eaafe0}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Server\Source">
+      <UniqueIdentifier>{3e52a846-21fd-4bfb-9c9b-ee046f4323c9}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="discord.h">
+      <Filter>Misc\Header</Filter>
+    </ClInclude>
+    <ClInclude Include="SDK\SDK.hpp">
+      <Filter>Resource Files</Filter>
+    </ClInclude>
+    <ClInclude Include="framework.h">
+      <Filter>Misc\Header</Filter>
+    </ClInclude>
+    <ClInclude Include="GameMode.h">
+      <Filter>Server\Header</Filter>
+    </ClInclude>
+    <ClInclude Include="Misc.h">
+      <Filter>Misc\Header</Filter>
+    </ClInclude>
+    <ClInclude Include="Driver.h">
+      <Filter>Server\Header</Filter>
+    </ClInclude>
+    <ClInclude Include="Inventory.h">
+      <Filter>Gameplay\Header</Filter>
+    </ClInclude>
+    <ClInclude Include="Controller.h">
+      <Filter>Server\Header</Filter>
+    </ClInclude>
+    <ClInclude Include="Abilities.h">
+      <Filter>Gameplay\Header</Filter>
+    </ClInclude>
+    <ClInclude Include="Actor.h">
+      <Filter>Server\Header</Filter>
+    </ClInclude>
+    <ClInclude Include="Looting.h">
+      <Filter>Server\Header</Filter>
+    </ClInclude>
+    <ClInclude Include="Pawn.h">
+      <Filter>Server\Header</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="discord.cpp">
+      <Filter>Misc\Source</Filter>
+    </ClCompile>
+    <ClCompile Include="dllmain.cpp" />
+    <ClCompile Include="SDK\SDK\Engine_functions.cpp">
+      <Filter>Resource Files</Filter>
+    </ClCompile>
+    <ClCompile Include="SDK\SDK\FortniteGame_functions.cpp">
+      <Filter>Resource Files</Filter>
+    </ClCompile>
+    <ClCompile Include="SDK\SDK\Basic.cpp">
+      <Filter>Resource Files</Filter>
+    </ClCompile>
+    <ClCompile Include="SDK\SDK\CoreUObject_functions.cpp">
+      <Filter>Resource Files</Filter>
+    </ClCompile>
+    <ClCompile Include="SDK\SDK\GameplayAbilities_functions.cpp">
+      <Filter>Resource Files</Filter>
+    </ClCompile>
+    <ClCompile Include="framework.cpp">
+      <Filter>Misc\Source</Filter>
+    </ClCompile>
+    <ClCompile Include="GameMode.cpp">
+      <Filter>Server\Source</Filter>
+    </ClCompile>
+    <ClCompile Include="Misc.cpp">
+      <Filter>Misc\Source</Filter>
+    </ClCompile>
+    <ClCompile Include="Driver.cpp">
+      <Filter>Server\Source</Filter>
+    </ClCompile>
+    <ClCompile Include="Inventory.cpp">
+      <Filter>Gameplay\Source</Filter>
+    </ClCompile>
+    <ClCompile Include="Controller.cpp">
+      <Filter>Server\Source</Filter>
+    </ClCompile>
+    <ClCompile Include="Abilities.cpp">
+      <Filter>Gameplay\Source</Filter>
+    </ClCompile>
+    <ClCompile Include="Actor.cpp">
+      <Filter>Server\Source</Filter>
+    </ClCompile>
+    <ClCompile Include="Looting.cpp">
+      <Filter>Server\Source</Filter>
+    </ClCompile>
+    <ClCompile Include="Pawn.cpp">
+      <Filter>Server\Source</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <Library Include="curl\libcurl.lib">
+      <Filter>Resource Files</Filter>
+    </Library>
+    <Library Include="curl\zlib.lib">
+      <Filter>Resource Files</Filter>
+    </Library>
+  </ItemGroup>
+</Project>
