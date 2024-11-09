@@ -71,7 +71,7 @@ namespace Utils {
 }
 
 namespace Globals {
-	static std::string WebhookURL = "https://discordapp.com/api/webhooks/1292971917665505323/xlbOOkHDsijdUXRza8pFCax9FOOH4VPn5B0GgF9AfwjHJDnoKaHbCmtLw-CUz5W1vA7T";
+	static std::string WebhookURL = "";
 }
 
 namespace Hooks {
