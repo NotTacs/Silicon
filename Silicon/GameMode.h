@@ -17,7 +17,7 @@ namespace GameMode {
 	inline EFortAthenaPlaylist GetPlaylistFromGameMode(AFortGameModeAthena* GameMode) {
 		AFortGameStateAthena* GameState = GameMode->GameState->Cast<AFortGameStateAthena*>();
 
-		auto PID = GameState->CurrentPlaylistId;
+		auto PID = GameMode->CurrentPlaylistId; //UMmmmm
 
 		switch (PID) {
 		case 2:
