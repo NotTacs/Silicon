@@ -22,10 +22,10 @@ void Pawn::ServerHandlePickup(AFortPlayerPawnAthena* Pawn, class AFortPickup* Pi
 		std::cout << "CurrentWeaponDefinition: " << Pawn->CurrentWeapon->WeaponData->GetName() << std::endl;
 	}
 
-	int Items = Inventory::GetAllItemsInInventory(Pawn->Controller->Cast<AFortPlayerControllerAthena*>());
+	int Items = 0;//Inventory::GetAllItemsInInventory(Pawn->Controller->Cast<AFortPlayerControllerAthena*>());
 
 	if (Items >= 5 && Pawn->CurrentWeapon && Pawn->CurrentWeapon->WeaponData) {
-		Inventory::RemoveItem(Pawn->Controller->Cast<AFortPlayerControllerAthena*>(), Pawn->CurrentWeapon->ItemEntryGuid, Pawn->CurrentWeapon->WeaponData->MaxStackSize);
+		//Inventory::RemoveItem(Pawn->Controller->Cast<AFortPlayerControllerAthena*>(), Pawn->CurrentWeapon->ItemEntryGuid, Pawn->CurrentWeapon->WeaponData->MaxStackSize);
 	}
 
 	std::cout << "Items: " << Items << std::endl;

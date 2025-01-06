@@ -4961,7 +4961,8 @@ void AFortPlayerController::PrintEventInfo()
 }
 
 
-// Function FortniteGame.FortPlayerController.RemoveItemFromQuickBars
+// Function FortniteGame.FortPlayerController.
+// FromQuickBars
 // (Final, Native, Public, BlueprintCallable)
 // Parameters:
 // class UFortItemDefinition*              ItemDefinition                                         (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)

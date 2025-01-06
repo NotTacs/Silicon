@@ -27,30 +27,7 @@ int Inventory::GetOpenSlot(AFortPlayerControllerAthena* PC, EFortQuickBars Quick
 	return -1;
 }
 
-void Inventory::RemoveItem(AFortPlayerControllerAthena* Controller, FGuid Guid, int Count) {
-	UFortWorldItem* Item = GetItemInstance(Controller, Guid);
 
-	int SubtractedAmount = Item->ItemEntry.Count -= Count;
-
-	if (SubtractedAmount <= 0) {
-		for (int i = 0; i < Controller->WorldInventory->Inventory.ItemInstances.Num(); i++) {
-			UFortWorldItem* ItemInstance = Controller->WorldInventory->Inventory.ItemInstances[i];
-			if (ItemInstance == Item) {
-				Controller->WorldInventory->Inventory.ItemInstances.Remove(i);
-				SpawnPickup(Item->ItemEntry.ItemDefinition, Controller->MyFortPawn->K2_GetActorLocation(), Count, Controller->MyFortPawn);
-			}
-		}
-	}
-	for (int i = 0; i < Controller->WorldInventory->Inventory.ReplicatedEntries.Num(); i++) {
-		FFortItemEntry ItemEntry = Controller->WorldInventory->Inventory.ReplicatedEntries[i];
-		if (ItemEntry.ItemGuid == Guid) {
-			Controller->WorldInventory->Inventory.ReplicatedEntries.Remove(i);
-			break;
-		}
-	}
-
-	Controller->QuickBars->ServerRemoveItemInternal(Guid, false, true);
-}
 
 UFortWorldItem* Inventory::GiveItem(AFortPlayerControllerAthena* Controller, UFortItemDefinition* Def, int Count, bool bStack) {
 	UFortWorldItem* Item = Def->CreateTemporaryItemInstanceBP(Count, 0)->Cast<UFortWorldItem*>();
@@ -135,17 +112,3 @@ UFortWorldItem* Inventory::GetItemInstance(AFortPlayerControllerAthena* Controll
 	}
 }
 
-int Inventory::GetAllItemsInInventory(AFortPlayerControllerAthena* PC) {
-	int Items = 0;
-	for (const FQuickBarSlot& Slot : PC->QuickBars->PrimaryQuickBar.Slots) {
-		if (Slot.Items.Data != nullptr) {
-			UFortWorldItem* Item = GetItemInstance(PC, *Slot.Items.Data);
-			if (Item->ItemEntry.ItemDefinition->IsA(UFortWeaponRangedItemDefinition::StaticClass())) {
-				Items++;
-				continue;
-			}
-		}
-	}
-
-	return Items;
-}
